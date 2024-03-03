@@ -1,0 +1,74 @@
+@import "../../../styles/theme/variables.scss";
+@import "../../../styles/abstracts/mixins.scss";
+
+.breadcrumb{
+    min-height: $s;
+}
+
+.product-list-container {
+    background-color: $brand-color-white;
+    width: 100%;
+    padding: 0 $s;
+}
+
+.product-item {
+    padding: $s 0;
+    height: 10rem;
+    border-bottom: 1px solid $brand-color-gray-100;
+    display: flex;
+
+    &__image {
+        margin-right: $s;
+        cursor: pointer;
+    }
+
+    &__information {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    &__price {
+        cursor: pointer;
+        margin-top: $s;
+        display: flex;
+        flex-direction: column;
+
+        &-value {
+            margin: $xs 0;
+            display: flex;
+            align-items: center;
+            gap: $xs;
+
+            span {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+
+        & img {
+            width: $s;
+        }
+
+        &-decimals {
+            font-size: 0.9rem;
+            position: relative;
+            top: -0.2rem;
+            right: 0.6rem;
+        }
+
+        &-description {
+            cursor: pointer;
+            color: $brand-color-gray-300;
+            margin: 0;
+        }
+    }
+
+    &__place {
+        color: $brand-color-gray-200;
+        font-size: 0.85rem;
+        margin-top: $l;
+        padding-right: $xxl;
+    }
+}

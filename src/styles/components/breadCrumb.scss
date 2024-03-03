@@ -1,0 +1,24 @@
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    margin: $s;
+    right: 3.7rem;
+    position: relative;
+    
+    .breadcrumb-item {
+        color: $breadcrumb--color;
+        font-weight: 300;
+        font-size: 0.85rem;
+        &::after {
+            content: " > ";
+            padding: 7px;
+        }
+
+        &:last-child::after {
+            content: "";
+        }
+    }
+    .active {
+        font-weight: bold;
+    }
+}

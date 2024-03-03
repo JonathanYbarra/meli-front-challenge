@@ -1,0 +1,23 @@
+@import "./theme/variables.scss";
+
+/* ==========================================================================
+   Abstracts
+   ========================================================================== */
+@import "./abstracts/layout.scss";
+@import "./abstracts/mixins.scss";
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+@import "./components/form.scss";
+@import "./components/breadCrumb.scss";
+
+/* ==========================================================================
+   Vendor - Plugins
+   ========================================================================== */
+@import "./vendor/normalize.scss";
+
+body {
+   background-color: $app--background-color;
+   font-family: "open sans", sans-serif;
+}

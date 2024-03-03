@@ -1,0 +1,85 @@
+/* ==========================================================================
+Branding base color
+========================================================================== */
+$brand-color-white: #ffffff;
+$brand-color-gray-light-1: #dbdada;
+$brand-color-gray-light-2: #d1cece;
+$brand-color-gray-100: #eeeeee;
+$brand-color-gray-200: #999999;
+$brand-color-gray-300: #333333;
+$brand-color-yellow: #ffe600;
+$brand-color-blue: #3483FA;
+
+/* ==========================================================================
+Color status 
+========================================================================== */
+// App page
+$app--background-color: $brand-color-gray-100;
+
+// App navbar
+$app-navbar--background-color: $brand-color-yellow;
+$app-navbar-height: 64px;
+$app-navbar-width: 100%;
+
+/* ==========================================================================
+Basic Spacing
+========================================================================== */
+$xs: 0.75rem;
+$s: 1rem;
+$m: 1.333rem;
+$l: 2rem;
+$xl: 3rem;
+$xxl: 4rem;
+
+/* ==========================================================================
+Button
+========================================================================== */
+$btn--font-size: 18px;
+$btn--line-height: 10px;
+$btn--font-weight: 300;
+$btn--text-transform: none;
+$btn--padding: 16px;
+$btn--border-radius: 4px;
+$btn-block--margin-top: 1rem;
+
+// Button primary
+$btn--primary-bg: $brand-color-blue;
+$btn--primary-color: $brand-color-white;
+
+
+/* ==========================================================================
+Form
+========================================================================== */
+$input--fontsize-s: $s;
+$input--bg: $brand-color-white;
+$input--border-radius: 4px;
+$input--height: 2.5rem;
+$input--placeholder-color: $brand-color-gray-200;
+
+/* ==========================================================================
+Breadcrumb
+========================================================================== */
+$breadcrumb--color: $brand-color-gray-200;
+
+
+/* ==========================================================================
+Skeleton Gradient Scale
+========================================================================== */
+$skeleton--gray-1: $brand-color-gray-light-1;
+$skeleton--gray-2: $brand-color-gray-light-2;
+
+/* ==========================================================================
+Breakpoints
+========================================================================== */
+
+/* Extra small screen / phone */
+$screen-xs: 480px !default;
+
+/* Small screen / tablet */
+$screen-sm: 860px !default;
+
+/* Medium screen / desktop */
+$screen-md: 1024px !default;
+
+/* Large screen / wide desktop */
+$screen-lg: 1200px !default;

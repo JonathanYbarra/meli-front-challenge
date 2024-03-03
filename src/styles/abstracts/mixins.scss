@@ -1,0 +1,17 @@
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin flex-justify-algin-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
