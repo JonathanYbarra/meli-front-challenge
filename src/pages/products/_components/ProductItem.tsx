@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Icon } from "../../../components/Icons";
 import * as URL from "../../../routes/utils/_url";
+import { ProductItemProps } from "./products.types";
+import { parseCurrency } from "../../../utils/parseCurrency";
 
-export const ProductItem = () => {
+export const ProductItem = (props: ProductItemProps) => {
+  const { price, title, picture, freeShipping } = props;
   const navigate = useNavigate();
 
   const navigateDetailProduct = () => {
@@ -13,7 +16,7 @@ export const ProductItem = () => {
     <li className="product-item">
       <img
         className="product-item__image"
-        src="https://http2.mlstatic.com/D_NQ_NP_681473-MLU72604604747_102023-O.webp"
+        src={picture}
         alt="product"
         onClick={navigateDetailProduct}
       />
@@ -25,16 +28,15 @@ export const ProductItem = () => {
           onClick={navigateDetailProduct}
         >
           <div className="product-item__price-value">
-            {/* {parseCurrency(price.currency)} {price.amount} */}
-            <span>$ 1980</span>
-            <div>
-              <Icon name="shipping" />
-            </div>
+            {parseCurrency(price.currency)} {price.amount}
+            {freeShipping && (
+              <div>
+                <Icon name="shipping" />
+              </div>
+            )}
           </div>
 
-          <p className="product-item__price-description">
-            Smart TV LG AI ThinQ 55NANO80SPA LED webOS 6.0 4K 55" 100V/240V
-          </p>
+          <p className="product-item__price-description">{title}</p>
         </div>
 
         <span className="product-item__place">Capital federal</span>

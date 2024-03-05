@@ -1,0 +1,37 @@
+@import "../../../styles/theme/variables.scss";
+@import "../../../styles/abstracts/mixins.scss";
+
+.detail-product-wrapper {
+    background-color: $brand-color-white;
+    display: flex;
+    flex-direction: column;
+    gap: $s;
+    margin-bottom: $s;
+    padding: $l;
+
+    .picture-container {
+        display: flex;
+
+        figure {
+            flex-basis: 50%;
+            margin: 0;
+        }
+        img {
+            height: 60vh;
+            width: fit-content;
+        }
+
+        & .information {
+            flex-basis: 50%;
+        }
+    }
+}
+
+.description {
+    &-title {
+    }
+
+    &-text {
+        color: $brand-color-gray-200;
+    }
+}

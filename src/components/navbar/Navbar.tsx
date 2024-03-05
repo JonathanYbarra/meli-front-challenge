@@ -1,9 +1,21 @@
-import { Link } from "react-router-dom";
-import LogoCompany from "../../assets/logos/Logo_ML.png";
 import "./navbar.styles.scss";
 import { Icon } from "../Icons";
+import { useFormik } from "formik";
+import { Link } from "react-router-dom";
+import LogoCompany from "../../assets/logos/Logo_ML.png";
+import { useSearchContext } from "../../context";
 
 export const Navbar = () => {
+  const { setSearch } = useSearchContext();
+
+  const formik = useFormik({
+    initialValues: {
+      searchTerms: "",
+    },
+    onSubmit: (values) => {
+      setSearch(values.searchTerms);
+    },
+  });
   return (
     <nav className="container navbar">
       <div className="navbar-content">
@@ -13,14 +25,14 @@ export const Navbar = () => {
           </figure>
         </Link>
 
-        <form className="form-search">
+        <form className="form-search" onSubmit={formik.handleSubmit}>
           <input
-            name="search"
+            name="searchTerms"
             type="text"
             className="input"
             placeholder="Nunca dejes de buscar"
-            // value={formData.search}
-            // onChange={handleInputChange}
+            onChange={formik.handleChange}
+            value={formik.values.searchTerms}
           />
           <button className="btn-icon">
             <Icon name="search" />
