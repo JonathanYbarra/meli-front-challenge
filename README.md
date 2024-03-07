@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+## :rocket: Mercado Libre Challenge: Aplicación con React.js, Redux Toolkit Query, Sass, Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [React.js](https://reactjs.org/): Librería para construir interfaces de usuario.
+- [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview): Biblioteca para manejar el estado y las solicitudes de API en React.js.
+- [Saas](https://sass-lang.com/): preprocesador de CSS con funciones avanzadas.
 
-Currently, two official plugins are available:
+### :bulb: Prerrequisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalados los siguientes elementos:
 
-## Expanding the ESLint configuration
+- Node.js: Asegúrate de tener instalada la última versión estable de [Node.js](https://nodejs.org/).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### :gear: Configuración inicial del proyecto
 
-- Configure the top-level `parserOptions` property like this:
+Sigue estos pasos para configurar y ejecutar el proyecto:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal en el directorio raíz del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias:
+   ```shell
+   npm install
+   ```
+4. Una vez que todas las dependencias estén instaladas, puedes iniciar la aplicación con el siguiente comando:
+   ```shell
+    npm run dev
+   ```
+   Esto iniciará la aplicación en el entorno de desarrollo y podrás acceder a ella en http://localhost:5173.
+
+### :file_folder: Estructura de directorios
+
+El proyecto sigue la siguiente estructura de directorios:
+
+```shell
+├── public       # Archivos estáticos y de configuración
+└── src
+ ├── app         # services, configuración y funciones de la API utilizando Redux Toolkit Query
+ ├── assets      # icons imgs
+ ├── common      # types globals o constantes
+ ├── components  # Componentes reutilizables de React.js
+ ├── context     # Contextos globales
+ ├── pages       # Páginas principales de la aplicación
+ ├── routes      # Sistema de routas
+ ├── styles      # Configuracion de stilos gloables
+ └── utils       # Utilidades y funciones auxiliares
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### :hammer_and_wrench: Comandos útiles
+
+Aquí tienes algunos comandos útiles para el desarrollo diario en este proyecto:
+
+`npm start`: Inicia la aplicación en modo de desarrollo.
+`npm build`: Genera una versión optimizada de la aplicación para producción.
