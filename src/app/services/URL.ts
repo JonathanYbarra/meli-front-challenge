@@ -1,5 +1,6 @@
-type QueryURL = Record<string, string>;
+const ITEM_PATH = "/items";
 
-export const QUERY_URL: QueryURL = {
-  searchProducts: "/items",
-};
+export const QUERY_URL = {
+  searchProducts: ITEM_PATH,
+  productId: (id: string) => `${ITEM_PATH}/${id}`,
+} as const;

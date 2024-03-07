@@ -1,1 +1,2 @@
-export * from "./DetailProduct";
+export { DetailProduct } from "./DetailProduct";
+export { ProductBreadCrumb } from "./ProductBreadCrumb";

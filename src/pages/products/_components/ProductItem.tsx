@@ -5,11 +5,11 @@ import { ProductItemProps } from "./products.types";
 import { parseCurrency } from "../../../utils/parseCurrency";
 
 export const ProductItem = (props: ProductItemProps) => {
-  const { price, title, picture, freeShipping } = props;
+  const { price, title, picture, freeShipping, id } = props;
   const navigate = useNavigate();
 
   const navigateDetailProduct = () => {
-    navigate(`${URL.ROUTE_URL_PRODUCT}/1`);
+    navigate( `${URL.ROUTE_URL_PRODUCT}/${id}`);
   };
 
   return (

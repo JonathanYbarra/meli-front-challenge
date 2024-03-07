@@ -6,10 +6,6 @@ declare global {
 interface AppConfig {
   apiUrl?: string;
 }
-console.log(
-  "🚀 AppConfig.import.meta.env.VITE_APP_API_BASE:",
-  import.meta.env.VITE_APP_API_BASE
-);
 
 export const config: AppConfig = {
   apiUrl: import.meta.env.VITE_APP_API_BASE,

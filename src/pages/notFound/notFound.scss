@@ -1,0 +1,17 @@
+@import "../../styles//abstracts//mixins.scss";
+
+.not-found-container {
+    @include flex-justify-algin-center();
+    height: 100vh;
+
+    .empty-state {
+        margin-top: 2rem;
+        text-align: center;
+
+        &__link {
+            text-align: center;
+            width: auto;
+            text-decoration: none;
+        }
+    }
+}

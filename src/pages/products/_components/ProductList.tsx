@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { ProductItem } from ".";
+import { useSearchParams } from "react-router-dom";
 import { useLazySearchProductsQuery } from "../../../app/services/products/products";
 import { ProductBreadCrumb } from "./ProductBreadCrumb";
 import "./products.scss";
-import { useSearchContext } from "../../../context";
 
 export const ProductList = () => {
-  const { searchTerms } = useSearchContext();
-
   const [searchProducts, { data: productList }] = useLazySearchProductsQuery();
+  let [searchParams] = useSearchParams();
 
   useEffect(() => {
-    searchProducts(searchTerms);
-  }, [searchTerms]);
+    const search = searchParams.get("search");
+    search && searchProducts(search.toString());
+  }, [searchParams]);
 
   return (
     <div>

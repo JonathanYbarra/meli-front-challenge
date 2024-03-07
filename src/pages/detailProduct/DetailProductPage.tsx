@@ -9,7 +9,7 @@ export const DetailProductPage = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>MELI - Products</title>
+        <title>MELI - Detail Product</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 

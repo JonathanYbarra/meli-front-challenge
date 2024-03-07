@@ -1,4 +1,8 @@
-import { SearchProductsResponse, TAG_TYPES } from "./products.types";
+import {
+  ItemByIdResponse,
+  SearchProductsResponse,
+  TAG_TYPES,
+} from "./products.types";
 import { createProvidesTags } from "../../utils/creatorUrlTag";
 import { baseApi } from "../../api";
 import { QUERY_URL } from "../URL";
@@ -21,7 +25,15 @@ const characterApi = baseApi
             TAG_TYPES.searchProducts
           ) as [],
       }),
+
+      productById: builder.query<ItemByIdResponse, string>({
+        query: (id) => ({
+          url: QUERY_URL.productId(id),
+          method: "GET",
+        }),
+      }),
     }),
   });
 
-export const { useLazySearchProductsQuery } = characterApi;
+export const { useLazySearchProductsQuery, useLazyProductByIdQuery } =
+  characterApi;

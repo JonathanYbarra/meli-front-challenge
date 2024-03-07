@@ -13,8 +13,9 @@ export const ROUTES_DEF: RouteDef[] = [
     path: URL.ROUTE_URL_ROOT,
     element: <AuthGuard />,
     children: [
-      { path: URL.ROUTE_URL_ROOT, element: PATH.ROUTE_PATH_PRODUCTS },
-      { path: URL.ROUTE_URL_PRODUCT_ID, element: PATH.ROUTE_PATH_PRODUCT }
+      { path: URL.ROUTE_URL_ROOT, element: null },
+      { path: URL.ROUTE_URL_PRODUCTS, element: PATH.ROUTE_PATH_PRODUCTS },
+      { path: URL.ROUTE_URL_PRODUCT_ID, element: PATH.ROUTE_PATH_PRODUCT },
     ],
   },
   { element: PATH.ROUTE_PATH_404, path: ROUTE_PARAM_WILDCARD },
